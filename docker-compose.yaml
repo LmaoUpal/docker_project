@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  universal:
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    restart: unless-stopped
+    command: [ "python3", "main.py" ]
